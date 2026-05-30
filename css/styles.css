@@ -125,3 +125,21 @@ body {
 .result-text { font-size: 16px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 24px; }
 .cta-btn { width: 100%; padding: 16px 24px; background: var(--color-primary); color: white; border: none; border-radius: var(--radius-md); font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s ease; }
 .cta-btn:hover { background: var(--color-primary-light); }
+
+/* Tablet */
+@media (min-width: 768px) {
+    .quiz-container {
+        max-width: 480px;
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .quiz-container {
+        max-width: 420px;
+        margin-top: 40px;
+        border-radius: var(--radius-lg);
+        min-height: calc(100vh - 80px);
+    }
+}
