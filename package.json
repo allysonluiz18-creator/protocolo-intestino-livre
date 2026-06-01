@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "gerar-pdf-premium": "node pdf-premium/gerar-pdf-premium.js"
+  },
+  "dependencies": {
+    "pdfkit": "^0.18.0",
+    "puppeteer": "^25.1.0"
+  }
+}

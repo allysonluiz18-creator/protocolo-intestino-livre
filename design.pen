@@ -1,0 +1,889 @@
+{
+  "version": "2.11",
+  "variables": {
+    "primary": { "type": "color", "value": "#2d5016" },
+    "primary-light": { "type": "color", "value": "#4a7c2e" },
+    "secondary": { "type": "color", "value": "#a8d5a2" },
+    "bg": { "type": "color", "value": "#f7f5f0" },
+    "bg-white": { "type": "color", "value": "#ffffff" },
+    "text": { "type": "color", "value": "#1a202c" },
+    "text-secondary": { "type": "color", "value": "#4a5568" },
+    "text-muted": { "type": "color", "value": "#718096" },
+    "accent": { "type": "color", "value": "#48bb78" },
+    "border": { "type": "color", "value": "#e2e8f0" },
+    "option-border": { "type": "color", "value": "#cbd5e0" },
+    "alert": { "type": "color", "value": "#856404" },
+    "alert-bg": { "type": "color", "value": "#fff3cd" }
+  },
+  "children": [
+    {
+      "id": "screen-1-quiz",
+      "type": "frame",
+      "name": "1. Quiz - Tela Inicial",
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "fill": "$bg-white",
+      "layout": "vertical",
+      "clip": true,
+      "children": [
+        {
+          "id": "s1-header",
+          "type": "frame",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$bg-white",
+          "layout": "horizontal",
+          "padding": { "left": 24, "right": 24 },
+          "alignItems": "center",
+          "justifyContent": "center",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeSides": ["bottom"],
+          "children": [
+            {
+              "id": "s1-brand",
+              "type": "text",
+              "content": "Protocolo Intestino Livre",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "fill": "$primary"
+            }
+          ]
+        },
+        {
+          "id": "s1-progress",
+          "type": "frame",
+          "name": "Progress",
+          "width": "fill_container",
+          "height": "fit_content",
+          "padding": { "top": 16, "bottom": 16, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "s1-progress-text",
+              "type": "text",
+              "content": "1 de 14",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "fill": "$text-muted",
+              "textAlign": "center"
+            },
+            {
+              "id": "s1-progress-bar-bg",
+              "type": "frame",
+              "name": "Progress Bar BG",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$border",
+              "marginTop": 8,
+              "cornerRadius": 2,
+              "children": [
+                {
+                  "id": "s1-progress-bar-fill",
+                  "type": "frame",
+                  "name": "Progress Bar Fill",
+                  "width": 26.8,
+                  "height": 4,
+                  "fill": "$accent",
+                  "cornerRadius": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s1-content",
+          "type": "frame",
+          "name": "Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "padding": { "top": 24, "bottom": 24, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "s1-emoji",
+              "type": "text",
+              "content": "👩",
+              "fontSize": 48,
+              "textAlign": "center",
+              "marginBottom": 16
+            },
+            {
+              "id": "s1-question",
+              "type": "text",
+              "content": "Para entender melhor seus sintomas, me conte:",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "fill": "$text",
+              "textAlign": "center",
+              "lineHeight": 1.3,
+              "marginBottom": 32
+            },
+            {
+              "id": "s1-options",
+              "type": "frame",
+              "name": "Options",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "s1-opt-1",
+                  "type": "frame",
+                  "name": "Option 1",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s1-opt-1-text",
+                      "type": "text",
+                      "content": "Tenho entre 20-35 anos",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s1-opt-2",
+                  "type": "frame",
+                  "name": "Option 2",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s1-opt-2-text",
+                      "type": "text",
+                      "content": "Tenho entre 36-50 anos",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s1-opt-3",
+                  "type": "frame",
+                  "name": "Option 3",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s1-opt-3-text",
+                      "type": "text",
+                      "content": "Tenho mais de 50 anos",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s1-footer",
+          "type": "frame",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": "fit_content",
+          "padding": { "top": 16, "bottom": 32, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "s1-footer-text",
+              "type": "text",
+              "content": "🔒 100% confidencial • Leva menos de 2 minutos",
+              "fontSize": 12,
+              "fill": "$text-muted",
+              "textAlign": "center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "screen-2-quiz",
+      "type": "frame",
+      "name": "2. Quiz - Sintoma Principal",
+      "x": 400,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "fill": "$bg-white",
+      "layout": "vertical",
+      "clip": true,
+      "children": [
+        {
+          "id": "s2-header",
+          "type": "frame",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$bg-white",
+          "layout": "horizontal",
+          "padding": { "left": 24, "right": 24 },
+          "alignItems": "center",
+          "justifyContent": "center",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeSides": ["bottom"],
+          "children": [
+            {
+              "id": "s2-brand",
+              "type": "text",
+              "content": "Protocolo Intestino Livre",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "fill": "$primary"
+            }
+          ]
+        },
+        {
+          "id": "s2-progress",
+          "type": "frame",
+          "name": "Progress",
+          "width": "fill_container",
+          "height": "fit_content",
+          "padding": { "top": 16, "bottom": 16, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "s2-progress-text",
+              "type": "text",
+              "content": "2 de 14",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "fill": "$text-muted",
+              "textAlign": "center"
+            },
+            {
+              "id": "s2-progress-bar-bg",
+              "type": "frame",
+              "name": "Progress Bar BG",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "$border",
+              "marginTop": 8,
+              "cornerRadius": 2,
+              "children": [
+                {
+                  "id": "s2-progress-bar-fill",
+                  "type": "frame",
+                  "name": "Progress Bar Fill",
+                  "width": 53.6,
+                  "height": 4,
+                  "fill": "$accent",
+                  "cornerRadius": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s2-content",
+          "type": "frame",
+          "name": "Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "padding": { "top": 24, "bottom": 24, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "s2-emoji",
+              "type": "text",
+              "content": "😣",
+              "fontSize": 48,
+              "textAlign": "center",
+              "marginBottom": 16
+            },
+            {
+              "id": "s2-question",
+              "type": "text",
+              "content": "Qual é o sintoma que mais te incomoda?",
+              "fontSize": 22,
+              "fontWeight": "bold",
+              "fill": "$text",
+              "textAlign": "center",
+              "lineHeight": 1.3,
+              "marginBottom": 32
+            },
+            {
+              "id": "s2-options",
+              "type": "frame",
+              "name": "Options",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "s2-opt-1",
+                  "type": "frame",
+                  "name": "Option 1",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s2-opt-1-text",
+                      "type": "text",
+                      "content": "Barriga estufada",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s2-opt-2",
+                  "type": "frame",
+                  "name": "Option 2",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s2-opt-2-text",
+                      "type": "text",
+                      "content": "Gases excessivos",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s2-opt-3",
+                  "type": "frame",
+                  "name": "Option 3",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s2-opt-3-text",
+                      "type": "text",
+                      "content": "Intestino preso",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s2-opt-4",
+                  "type": "frame",
+                  "name": "Option 4",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$bg-white",
+                  "stroke": "$option-border",
+                  "strokeWidth": 2,
+                  "cornerRadius": 12,
+                  "layout": "horizontal",
+                  "padding": { "left": 20, "right": 20 },
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "s2-opt-4-text",
+                      "type": "text",
+                      "content": "Dor abdominal",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "fill": "$text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s2-footer",
+          "type": "frame",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": "fit_content",
+          "padding": { "top": 16, "bottom": 32, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "s2-footer-text",
+              "type": "text",
+              "content": "🔒 100% confidencial • Leva menos de 2 minutos",
+              "fontSize": 12,
+              "fill": "$text-muted",
+              "textAlign": "center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "screen-3-result",
+      "type": "frame",
+      "name": "3. Resultado do Quiz",
+      "x": 800,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "fill": "$bg-white",
+      "layout": "vertical",
+      "clip": true,
+      "children": [
+        {
+          "id": "s3-header",
+          "type": "frame",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$bg-white",
+          "layout": "horizontal",
+          "padding": { "left": 24, "right": 24 },
+          "alignItems": "center",
+          "justifyContent": "center",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeSides": ["bottom"],
+          "children": [
+            {
+              "id": "s3-brand",
+              "type": "text",
+              "content": "Protocolo Intestino Livre",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "fill": "$primary"
+            }
+          ]
+        },
+        {
+          "id": "s3-content",
+          "type": "frame",
+          "name": "Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "padding": { "top": 40, "bottom": 40, "left": 24, "right": 24 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "s3-emoji",
+              "type": "text",
+              "content": "🎯",
+              "fontSize": 64,
+              "textAlign": "center",
+              "marginBottom": 16
+            },
+            {
+              "id": "s3-title",
+              "type": "text",
+              "content": "Seu Diagnóstico Personalizado",
+              "fontSize": 24,
+              "fontWeight": "bold",
+              "fill": "$text",
+              "textAlign": "center",
+              "lineHeight": 1.3,
+              "marginBottom": 16
+            },
+            {
+              "id": "s3-badge",
+              "type": "frame",
+              "name": "Badge",
+              "width": "fit_content",
+              "height": "fit_content",
+              "fill": "#dc354520",
+              "cornerRadius": 20,
+              "padding": { "top": 8, "bottom": 8, "left": 16, "right": 16 },
+              "children": [
+                {
+                  "id": "s3-badge-text",
+                  "type": "text",
+                  "content": "Nível de Alerta: Alto",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "fill": "#dc3545"
+                }
+              ]
+            },
+            {
+              "id": "s3-description",
+              "type": "text",
+              "content": "Identificamos 4 gatilhos que podem estar causando seus sintomas. Mas existem outros gatilhos ocultos que talvez estejam escondidos.",
+              "fontSize": 16,
+              "fill": "$text-secondary",
+              "textAlign": "center",
+              "lineHeight": 1.6,
+              "marginBottom": 32
+            },
+            {
+              "id": "s3-cta",
+              "type": "frame",
+              "name": "CTA Button",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "$primary",
+              "cornerRadius": 12,
+              "layout": "horizontal",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "id": "s3-cta-text",
+                  "type": "text",
+                  "content": "QUERO DESCOBRIR OS GATILHOS OCULTOS",
+                  "fontSize": 16,
+                  "fontWeight": "600",
+                  "fill": "$bg-white",
+                  "textAlign": "center"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "screen-4-offer",
+      "type": "frame",
+      "name": "4. Página de Oferta - Topo",
+      "x": 1200,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "fill": "$bg-white",
+      "layout": "vertical",
+      "clip": true,
+      "children": [
+        {
+          "id": "s4-header",
+          "type": "frame",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$primary",
+          "layout": "horizontal",
+          "padding": { "left": 20, "right": 20 },
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "s4-brand",
+              "type": "text",
+              "content": "PROTOCOLO INTESTINO LIVRE",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "fill": "$bg-white",
+              "textAlign": "center"
+            }
+          ]
+        },
+        {
+          "id": "s4-headline",
+          "type": "frame",
+          "name": "Headline",
+          "width": "fill_container",
+          "height": "fit_content",
+          "fill": "$bg",
+          "padding": { "top": 24, "bottom": 24, "left": 20, "right": 20 },
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "s4-headline-text",
+              "type": "text",
+              "content": "Seu intestino está tentando dar sinais. Descubra os erros que podem estar causando inchaço, gases e prisão de ventre todos os dias.",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "fill": "$primary",
+              "textAlign": "center",
+              "lineHeight": 1.4
+            }
+          ]
+        },
+        {
+          "id": "s4-identification",
+          "type": "frame",
+          "name": "Identification",
+          "width": "fill_container",
+          "height": "fit_content",
+          "padding": { "top": 20, "bottom": 20, "left": 20, "right": 20 },
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "s4-id-title",
+              "type": "text",
+              "content": "Você se identifica com isso?",
+              "fontSize": 16,
+              "fontWeight": "bold",
+              "fill": "$primary",
+              "textAlign": "center",
+              "marginBottom": 16
+            },
+            {
+              "id": "s4-checklist",
+              "type": "frame",
+              "name": "Checklist",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "s4-check-1",
+                  "type": "frame",
+                  "name": "Check 1",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-1-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-1-text",
+                      "type": "text",
+                      "content": "Barriga estufada mesmo sem comer muito",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s4-check-2",
+                  "type": "frame",
+                  "name": "Check 2",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-2-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-2-text",
+                      "type": "text",
+                      "content": "Sensação de peso após as refeições",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s4-check-3",
+                  "type": "frame",
+                  "name": "Check 3",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-3-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-3-text",
+                      "type": "text",
+                      "content": "Intestino que funciona um dia e trava no outro",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s4-check-4",
+                  "type": "frame",
+                  "name": "Check 4",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-4-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-4-text",
+                      "type": "text",
+                      "content": "Gases frequentes",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s4-check-5",
+                  "type": "frame",
+                  "name": "Check 5",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-5-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-5-text",
+                      "type": "text",
+                      "content": "Roupa apertando ao final do dia",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                },
+                {
+                  "id": "s4-check-6",
+                  "type": "frame",
+                  "name": "Check 6",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg",
+                  "cornerRadius": 8,
+                  "layout": "horizontal",
+                  "padding": { "left": 12, "right": 12 },
+                  "alignItems": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "s4-check-6-box",
+                      "type": "text",
+                      "content": "☐",
+                      "fontSize": 20
+                    },
+                    {
+                      "id": "s4-check-6-text",
+                      "type": "text",
+                      "content": "Sensação de não esvaziar completamente",
+                      "fontSize": 14,
+                      "fill": "$text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "s4-check-message",
+              "type": "frame",
+              "name": "Check Message",
+              "width": "fill_container",
+              "height": "fit_content",
+              "fill": "$accent",
+              "cornerRadius": 8,
+              "padding": { "top": 12, "bottom": 12, "left": 16, "right": 16 },
+              "marginTop": 16,
+              "children": [
+                {
+                  "id": "s4-check-message-text",
+                  "type": "text",
+                  "content": "Se marcou 2 ou mais opções, o protocolo foi criado para você.",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "fill": "$bg-white",
+                  "textAlign": "center"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
